@@ -24,3 +24,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@media print {
+  /* 印刷時はナビゲーションや不要な背景を消す */
+  .no-print { display: none; }
+  body { font-size: 12pt; color: black; }
+}
