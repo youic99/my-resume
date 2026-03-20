@@ -63,9 +63,9 @@ export default function Home() {
               応募への意気込み
             </h3>
             <p className="leading-relaxed text-slate-700">
-              Web開発の面白さに目覚め、独学でNext.jsを用いたポートフォリオ作成に挑戦しています。
-              スプーキーズ様の技術力の高さと遊び心のある社風に惹かれ、「自分もこの環境で成長したい、貢献したい」と強く思い応募いたしました。
-              未経験ではありますが、自走力とキャッチアップの速さを武器に、一日も早く戦力になれるよう努めます。
+              プログラミングやWeb開発の面白さに目覚め、これを仕事にしようと決意しました。
+              スプーキーズ様の独創性と遊び心のある社風に惹かれ、「自分もこの環境で成長したい、貢献したい」と強く思い応募いたしました。
+              まだまだ拙い身ではありますが、自走力とキャッチアップの速さを武器に、一日も早く戦力になれるよう努めます。
             </p>
           </section>
         </div>
@@ -77,9 +77,9 @@ export default function Home() {
             <h3 className="font-bold text-lg mb-4 text-slate-900">Education</h3>
             <div className="space-y-4">
               <div>
-                <p className="text-xs text-slate-400 font-mono">2017.04</p>
+                <p className="text-xs text-slate-400 font-mono">2017.03</p>
                 <p className="font-bold text-sm">福岡県立筑紫丘高校 理数科 卒業</p>
-                <p className="text-xs text-slate-400 font-mono">2024.04</p>
+                <p className="text-xs text-slate-400 font-mono">2024.03</p>
                 <p className="font-bold text-sm">京都大学 総合人間学部 卒業</p>
               </div>
             </div>
