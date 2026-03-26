@@ -108,7 +108,7 @@ export default function Home() {
                     LibreMon
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    読書管理アプリ。読んだ本の記録、進捗管理、読書メモの保存などができます。
+                    ISBNコードを入力すると、あなただけのアバター「リブレモン」が自動生成される読書管理アプリ。今後は読書量に応じてリブレモンが進化したり、ユーザー同士がリブレモンを通じてコミュニケーションできる機能を追加予定。
                   </p>
                 </div>
                 <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-colors group-hover:text-primary" />
