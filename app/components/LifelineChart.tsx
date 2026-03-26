@@ -23,8 +23,8 @@ const data = [
 
 const LifelineChart = () => {
   return (
-    <div className="w-full h-full min-h-[300px]">
-      <ResponsiveContainer width="100%" height="100%">
+    <div className="w-full h-[300px]">
+      <ResponsiveContainer width="100%" height={300}>
         <LineChart
           data={data}
           margin={{ top: 20, right: 30, left: 0, bottom: 20 }}
