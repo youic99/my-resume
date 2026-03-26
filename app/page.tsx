@@ -32,7 +32,6 @@ export default function Home() {
 
               <p className="max-w-lg text-lg leading-relaxed text-muted-foreground">
                 プログラミングとWeb開発に情熱を注ぐエンジニア志望。
-                ユーザー体験を重視した美しいインターフェースの構築に興味があります。
               </p>
 
               <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
