@@ -1,4 +1,4 @@
-'use client'; // Rechartsはブラウザで動くため必須です
+'use client';
 
 import React from 'react';
 import {
@@ -12,8 +12,6 @@ import {
   ReferenceLine,
 } from 'recharts';
 
-// 1. グラフに表示するデータ
-// 自分の人生の出来事に合わせて数値を調整してください
 const data = [
   { age: 15, score: 70, event: '高校入学。軽音部に入りバンド活動にのめり込む' },
   { age: 18, score: 50, event: '高校卒業・浪人開始。ひたすら勉強に打ち込む' },
@@ -25,37 +23,34 @@ const data = [
 
 const LifelineChart = () => {
   return (
-    <div className="w-full h-full bg-white p-4 rounded-xl shadow-sm border">
+    <div className="w-full h-full min-h-[300px]">
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           data={data}
           margin={{ top: 20, right: 30, left: 0, bottom: 20 }}
         >
-          {/* 背景のグリッド線 */}
-          <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#eee" />
+          <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#334155" />
           
-          {/* X軸：年齢 */}
           <XAxis 
             dataKey="age" 
             unit="歳" 
-            tick={{ fill: '#666' }} 
-            axisLine={{ stroke: '#ccc' }}
+            tick={{ fill: '#94a3b8', fontSize: 12 }} 
+            axisLine={{ stroke: '#334155' }}
+            tickLine={{ stroke: '#334155' }}
           />
           
-          {/* Y軸：モチベーション（0〜100） */}
           <YAxis 
             domain={[0, 100]} 
-            hide // 数値そのものより波形が大事なので隠してもOK
+            hide
           />
 
-          {/* ホバー時の説明パネル */}
           <Tooltip 
             content={({ active, payload }) => {
               if (active && payload && payload.length) {
                 return (
-                  <div className="bg-slate-800 text-white p-3 rounded shadow-lg text-sm">
-                    <p className="font-bold">{`${payload[0].payload.age}歳`}</p>
-                    <p className="mt-1">{payload[0].payload.event}</p>
+                  <div className="rounded-lg border border-border bg-card px-4 py-3 shadow-xl">
+                    <p className="font-bold text-primary">{`${payload[0].payload.age}歳`}</p>
+                    <p className="mt-1 text-sm text-foreground">{payload[0].payload.event}</p>
                   </div>
                 );
               }
@@ -63,23 +58,21 @@ const LifelineChart = () => {
             }}
           />
 
-          {/* 基準線（中心線） */}
-          <ReferenceLine y={50} stroke="#ddd" strokeDasharray="3 3" />
+          <ReferenceLine y={50} stroke="#334155" strokeDasharray="3 3" />
 
-          {/* 折れ線本体 */}
           <Line
-            type="monotone" // 滑らかな曲線にする
+            type="monotone"
             dataKey="score"
-            stroke="#3b82f6" // 青色
+            stroke="#38bdf8"
             strokeWidth={3}
-            dot={{ r: 6, fill: '#3b82f6', strokeWidth: 2, stroke: '#fff' }}
-            activeDot={{ r: 8 }}
-            animationDuration={1500} // 表示時のアニメーション
+            dot={{ r: 6, fill: '#38bdf8', strokeWidth: 2, stroke: '#1e293b' }}
+            activeDot={{ r: 8, fill: '#22d3ee' }}
+            animationDuration={1500}
           />
         </LineChart>
       </ResponsiveContainer>
-      <p className="text-center text-xs text-gray-400 mt-2">
-        ※グラフの点にマウスを合わせると詳細が表示されます
+      <p className="text-center text-xs text-muted-foreground mt-4">
+        グラフの点にマウスを合わせると詳細が表示されます
       </p>
     </div>
   );
